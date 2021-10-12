@@ -17,8 +17,8 @@ title: CSE 143
 tagline: Programming with Data Structures
 description: Computer Programming II, Autumn 2020
 author: Kevin Lin
-baseurl: '/' # the subpath of your site, e.g. /blog
-url: 'https://cem-info.github.io/CEM_FC_PowerShell' # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/CEM_FC_PowerShell' # the subpath of your site, e.g. /blog
+url: 'https://cem-info.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 google_site_verification: 'QclY_1udbdKts462GzFHLmFoaioICIQ16kjZumjRJIg'
 
