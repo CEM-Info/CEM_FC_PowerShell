@@ -1,0 +1,92 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: CSE 143
+tagline: Programming with Data Structures
+description: Computer Programming II, Autumn 2020
+author: Kevin Lin
+baseurl: '/courses/cse143/20au' # the subpath of your site, e.g. /blog
+url: 'https://courses.cs.washington.edu' # the base hostname & protocol for your site, e.g. http://example.com
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+google_site_verification: 'QclY_1udbdKts462GzFHLmFoaioICIQ16kjZumjRJIg'
+
+# Theme settings
+remote_theme: pdmosses/just-the-docs@pages-and-collections
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+permalink: pretty
+aux_links:
+  Ed:
+    - 'https://us.edstem.org/courses/631/'
+  Advising:
+    - 'https://cs.washington.edu/academics/ugrad/advising'
+  Feedback:
+    - 'https://feedback.cs.washington.edu/'
+aux_links_new_tab: true
+footer_content: 'Kevin Lin &copy; 2020 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'
+
+# Collections for website data
+collections:
+  staffers:
+  modules:
+  slides:
+    permalink: '/:path/'
+    output: true
+  lessons:
+    permalink: '/:path/'
+    output: true
+# Default layouts for each collection type
+defaults:
+  - scope:
+      path: ''
+      type: staffers
+    values:
+      layout: staffer
+      subpath: '/assets/images/'
+  - scope:
+      path: ''
+      type: modules
+    values:
+      layout: module
+  - scope:
+      path: ''
+      type: slides
+    values:
+      layout: minimal
+      search_exclude: true
+      sitemap: false
+  - scope:
+      path: ''
+      type: lessons
+    values:
+      layout: page
+# Configure collections for Just the Docs
+just_the_docs:
+  collections:
+    lessons:
+      name: Lessons
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
